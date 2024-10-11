@@ -27,7 +27,7 @@ function App() {
             GET IN TOUCH
           </h2>
           <h3 className='phoneNum'>
-          +1(702) - 927 - 1997
+          +1(720) - 927 - 1997
           </h3>
         </div>
       </div>
