@@ -1,0 +1,50 @@
+.tagLine {
+    display: flex;
+    width: 528px;
+    height: 92px;
+    justify-content: center;
+    color: black;
+    font-size: 48px;
+    font-family: 'SeoulNamsan CBL', 'Roboto';
+    margin: 0px auto;
+}
+
+.landingPageSubtitle {
+    display: flex;
+    width: 486px;
+    height: 139px;
+    color: #797575;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 100% */
+    text-align: center;
+    margin: 0px auto;
+}
+
+.landingPageHeader { 
+    margin-top: 92px;
+}
+
+.landingButton {
+    display: flex;
+    padding: 15px 125px;
+    margin: 0px auto;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #84E8E3;
+    color: #FFF;
+}
+
+.landingPageHeader {
+    justify-content: center;
+}
+
+.landingPageHeader {
+    justify-content: center;
+}
