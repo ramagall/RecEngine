@@ -8,11 +8,11 @@ function LandingPageTextFields() {
         <div className="textFields">
             <Box className="textFields"
             component="form"
-            sx={{ '& .MuiTextField-root': { m: 1, width: '50ch' } }}
+            sx={{ '& .MuiTextField-root': { m: 1, width: '50ch'} }}
             noValidate
             autoComplete="off"
             >
-                <div>
+                <div class='textField'>
                 <TextField 
                 size ='small' 
                 id="first-name-field" 

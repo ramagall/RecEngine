@@ -1,18 +1,19 @@
 .tagLine {
     display: flex;
-    width: 528px;
-    height: 92px;
+    width: 36%;
+    min-height: 92px;
     justify-content: center;
     color: black;
     font-size: 48px;
     font-family: 'SeoulNamsan CBL', 'Roboto';
     margin: 0px auto;
+    margin-bottom: .2rem;
 }
 
 .landingPageSubtitle {
     display: flex;
-    width: 486px;
-    height: 139px;
+    width: 36%;
+    min-height: 139px;
     color: #797575;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: Roboto;
@@ -22,15 +23,18 @@
     line-height: 24px; /* 100% */
     text-align: center;
     margin: 0px auto;
+    margin-bottom: 1rem;
 }
 
 .landingPageHeader { 
     margin-top: 92px;
+    width: 100%;
 }
+
 
 .landingButton {
     display: flex;
-    padding: 15px 125px;
+    padding: 1rem 9.8rem;
     margin: 0px auto;
     font-size: 15px;
     text-align: center;
