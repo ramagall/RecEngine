@@ -20,7 +20,7 @@ function App() {
       </div>
       <div className="footer">
         <div className="logo">
-          <img class="logoImg" src="/LambNoBackground.png" alt="Lamb Telecom Logo"></img>
+          <img className="logoImg" src="/LambNoBackground.png" alt="Lamb Telecom Logo"></img>
         </div>
         <div className="contactInfo">
           <h2 className='getInTouch'>
