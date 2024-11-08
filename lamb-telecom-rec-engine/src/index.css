@@ -78,7 +78,8 @@ body {
 
 .getInTouch{
     font-family: 'Roboto';
-    font-weight: 100;
+    font-weight: 400;
+    font-size: 1.8rem;
 }
 
 .logoImg {
@@ -88,5 +89,6 @@ body {
 .phoneNum {
     font-size: 1rem;
     font-weight: normal;
+    color: #5B5A5A;
 }
 

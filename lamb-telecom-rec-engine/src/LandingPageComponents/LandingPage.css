@@ -1,3 +1,8 @@
+@font-face {
+    font-family: SeoulNamsan CBL;
+    src: url(./src/assets/fonts/SeoulNamsan-CBL.ttf.woff);
+  }
+
 .tagLine {
     display: flex;
     width: 36%;
@@ -5,7 +10,8 @@
     justify-content: center;
     color: black;
     font-size: 48px;
-    font-family: 'SeoulNamsan CBL', 'Roboto';
+    font-family: SeoulNamsan CBL;
+    font-weight: 400;
     margin: 0px auto;
     margin-bottom: .2rem;
 }
@@ -72,6 +78,7 @@
 
 .textField {
     width: 50ch;
+    font-family: 'Roboto';
 }
 .test {
     width: 50ch;

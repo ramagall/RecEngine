@@ -29,6 +29,9 @@ function App() {
           <h3 className='phoneNum'>
           +1(720) - 927 - 1997
           </h3>
+          <h3 className='phoneNum'>
+            zach@lambtelcom.com
+          </h3>
         </div>
       </div>
     </>
