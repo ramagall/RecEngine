@@ -45,7 +45,9 @@ body {
 
 .landingButtonBox {
     display: flex;
-    padding: 30px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
 }
   
 .footer {
