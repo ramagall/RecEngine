@@ -52,3 +52,45 @@
 .landingPageHeader {
     justify-content: center;
 }
+
+.textFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.textFieldHelper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.textField {
+    width: 50ch;
+}
+.test {
+    width: 50ch;
+}
+@media (max-width: 416px) {
+    .textField {
+        width: 70%;
+    }
+
+    .landingButton {
+        display: flex;
+        padding: 1rem 4rem;
+        margin: 0px auto;
+        font-size: 15px;
+        text-align: center;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        background-color: #84E8E3;
+        color: #FFF;
+    }
+}
