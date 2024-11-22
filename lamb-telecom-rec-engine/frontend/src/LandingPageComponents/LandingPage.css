@@ -3,6 +3,17 @@
     src: url(./src/assets/fonts/SeoulNamsan-CBL.ttf.woff);
   }
 
+  @font-face {
+    font-family: Lastica;
+    src: url(./src/assets/fonts/Lastica.ttf);
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  h1 {
+    font-family: 'Lastica'; 
+  }
+
 .tagLine {
     display: flex;
     width: 36%;
@@ -36,7 +47,6 @@
     margin-top: 92px;
     width: 100%;
 }
-
 
 .landingButton {
     display: flex;

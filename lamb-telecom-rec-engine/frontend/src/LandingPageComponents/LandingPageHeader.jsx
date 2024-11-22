@@ -1,6 +1,7 @@
 import './LandingPage.css'
 
-function LandingPageHeader(){
+// This function produces the header on the landing page
+function LandingPageHeader() {
 return(
     <>
     <div className="landingPageHeader">
