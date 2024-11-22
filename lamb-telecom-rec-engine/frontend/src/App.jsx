@@ -37,18 +37,4 @@ function App() {
     </>
   );
 }
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import GeneralTechnologies from './GeneralTechnologies';
-
-function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/general-technologies" element={<GeneralTechnologies />} />
-                {/* Other routes */}
-            </Routes>
-        </Router>
-    );
-}
 export default App
