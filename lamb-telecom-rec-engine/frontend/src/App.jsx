@@ -9,6 +9,7 @@ function App() {
     <>
       <div className="greyTop">
       </div>
+      <a href="https://lambtele.com" className="homeNav">Home</a>
       <div>
         <LandingPageHeader/>
       </div>

@@ -38,10 +38,15 @@ body {
     top: 0;
     right: 0;
     width: 100%;
-    min-height: 61px;
+    min-height: 1rem;
     flex-shrink: 0;
     background: rgba(217, 217, 217, 0.45);
   }
+/*Need the font for this and header*/
+.homeNav {
+    font-size: 2rem;
+    margin-left: 2rem;
+}
 
 .landingButtonBox {
     display: flex;
