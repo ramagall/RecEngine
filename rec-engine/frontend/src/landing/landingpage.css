@@ -8,9 +8,6 @@
     src: url(./src/assets/fonts/Lastica.ttf);
   }
 
-  h1 {
-    font-family: 'Lastica'; 
-  }
 
 .tagLine {
     display: flex;
@@ -24,6 +21,10 @@
     margin: 0px auto;
     margin-bottom: .2rem;
 }
+
+.h1 {
+    font-family: 'Lastica'; 
+  }
 
 .landingPageSubtitle {
     display: flex;

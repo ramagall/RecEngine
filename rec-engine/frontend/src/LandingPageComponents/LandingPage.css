@@ -1,0 +1,111 @@
+@font-face {
+    font-family: SeoulNamsan CBL;
+    src: url(./src/assets/fonts/SeoulNamsan-CBL.ttf.woff);
+  }
+
+  @font-face {
+    font-family: Lastica;
+    src: url(./src/assets/fonts/Lastica.ttf);
+  }
+
+.h1 {
+    font-family: Lastica;
+}
+
+.tagLine {
+    display: flex;
+    width: 36%;
+    min-height: 92px;
+    justify-content: center;
+    color: black;
+    font-size: 48px;
+    font-family: Lastica;
+    font-weight: 400;
+    margin: 0px auto;
+    margin-bottom: .2rem;
+}
+
+.landingPageSubtitle {
+    display: flex;
+    width: 36%;
+    min-height: 139px;
+    color: #797575;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 100% */
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 1rem;
+}
+
+.landingPageHeader { 
+    margin-top: 92px;
+    width: 100%;
+}
+
+.landingButton {
+    display: flex;
+    padding: 1rem 9.8rem;
+    margin: 0px auto;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #84E8E3;
+    color: #FFF;
+}
+
+.landingPageHeader {
+    justify-content: center;
+}
+
+.landingPageHeader {
+    justify-content: center;
+}
+
+.textFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.textFieldHelper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.textField {
+    width: 50ch;
+    font-family: 'Roboto';
+}
+.test {
+    width: 50ch;
+}
+@media (max-width: 416px) {
+    .textField {
+        width: 70%;
+    }
+
+    .landingButton {
+        display: flex;
+        padding: 1rem 4rem;
+        margin: 0px auto;
+        font-size: 15px;
+        text-align: center;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        background-color: #84E8E3;
+        color: #FFF;
+    }
+}
