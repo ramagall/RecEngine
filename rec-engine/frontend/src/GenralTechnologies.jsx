@@ -31,7 +31,7 @@ const GeneralTechnology = () => {
           <li style={{ marginBottom: '15px' }}>
             <label style={{ fontWeight: 'bold' }}>What solutions or technology are you looking for us to help you with?</label>
             <div style={{ marginTop: '10px' }}>
-              {['Cloud Computing', 'Cybersecurity', 'Data Analytics', 'IT Support', 'Software Development'].map(option => (
+              {['Phones', 'Internet', 'Cybersecurity', 'Backup and Disaster Recovery'].map(option => (
                 <label key={option} style={{ display: 'block', marginBottom: '5px' }}>
                   <input type="checkbox" value={option} style={{ marginRight: '10px' }} />
                   {option}
