@@ -10,7 +10,7 @@ import GeneralTechnology from './GenralTechnologies.jsx';
 
 function App() {
   return(
-    <LandingPage></LandingPage>
+    <Phones></Phones>
   );
 }
 
