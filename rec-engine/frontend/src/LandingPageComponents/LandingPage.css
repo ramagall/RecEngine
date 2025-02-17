@@ -14,7 +14,7 @@
 
 .tagLine {
     display: flex;
-    width: 36%;
+    width: 100%;
     min-height: 92px;
     justify-content: center;
     color: black;

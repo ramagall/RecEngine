@@ -11,7 +11,7 @@ import { ProgressBar, CheckboxGroup } from './global/global-components.jsx';
 
 function App() {
   return(
-    <ProgressBar></ProgressBar>
+    <LandingPage></LandingPage>
   );
 }
 
