@@ -6,11 +6,12 @@ import LandingPage from './landing/landingpage.jsx';
 import Phones from './phones/phones1.jsx';
 import Phones2 from './phones/phones2.jsx';
 import GeneralTechnology from './GenralTechnologies.jsx';
+import { ProgressBar, CheckboxGroup } from './global/global-components.jsx';
 
 
 function App() {
   return(
-    <Phones></Phones>
+    <ProgressBar></ProgressBar>
   );
 }
 
