@@ -33,6 +33,8 @@
 
 /* Buttons with Gradient */
 .gradient-button {
+  margin-left: 40px;
+  margin-top: 20px;
   background: linear-gradient(to right, #47EBE2, #3BC4BC);
   color: white;
   border: none;
@@ -49,7 +51,7 @@
 
 /* Oval Bullet for Questions (Not Bold) */
 .question-label {
-  margin-left: 20px;
+  margin-left: 30px;
   font-weight: normal;
   display: block;
   position: relative;
