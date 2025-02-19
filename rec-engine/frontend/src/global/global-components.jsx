@@ -49,6 +49,7 @@ const Textbox = ({ label, name, value, onChange, placeholder }) => {
       <label className="question-label">{label}</label>
       <textarea
         name={name}
+        maxLength={label.length}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
@@ -58,8 +59,26 @@ const Textbox = ({ label, name, value, onChange, placeholder }) => {
   );
 };
 
+const QuestionWithInput = ({ label, name, value, onChange, placeholder }) => {
+  return (
+    <div className="question-container">
+      <label className="question-label">
+        {label}
+      </label>
+      <input
+        type="text"
+        name={name}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        className="question-input"
+      />
+    </div>
+  );
+};
+
 // Page Header in Lastica Font
-const PageHeader = ({ title }) => {
+const PageHeader = ({title}) => {
   return <h1 className="page-header">{title}</h1>;
 };
 
@@ -67,9 +86,11 @@ const PageHeader = ({ title }) => {
 const PageFooter = () => {
   return (
     <footer className="page-footer">
-      <p>LAMBTELE.COM</p>
+       <a href="https://lambtele.com" target="_blank" rel="noopener noreferrer">
+        LAMBTELE.COM
+      </a>
     </footer>
   );
 };
 
-export { ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter };
+export { ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput};

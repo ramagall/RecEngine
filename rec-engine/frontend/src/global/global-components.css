@@ -46,31 +46,31 @@
 }
 
 .gradient-button:hover {
-  background: linear-gradient(to right, #47EBE2, #3BC4BC);
+  background: radial-gradient( #47EBE2, #3BC4BF);
+
 }
 
 /* Oval Bullet for Questions (Not Bold) */
 .question-label {
-  margin-left: 30px;
-  font-weight: normal;
-  display: block;
   position: relative;
-  padding-left: 30px;
+  font-weight: normal;
   font-size: 16px;
   color: #333;
   margin-bottom: 10px;
+  margin-left: 60px; /* Keeps label away from the page edge */
+  padding-left: 10px; /* Small space to ensure text doesn’t overlap the bullet */
 }
 
 .question-label::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -30px;  /* 👈 Moves the bullet further away from text */
   top: 50%;
   transform: translateY(-50%);
-  width: 12px;
+  width: 30px;
   height: 6px;
   background-color: #47EBE2;
-  border-radius: 50px;
+  border-radius: 50% / 100%;
 }
 
 /* Checkbox Group (Square with Checkmark) */
@@ -80,13 +80,15 @@
 
 .checkbox-options {
   display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
   flex-direction: column;
 }
 
 .checkbox-item {
   display: flex;
   align-items: center;
-  margin-left: 60px;
+  margin-left: 70px;
   margin-bottom: 5px;
   cursor: pointer;
 }
@@ -125,7 +127,8 @@
 
 .textbox-input {
   width: 80%;
-  margin-left: 49px;
+  margin-left: 70px;
+  margin-top: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -134,11 +137,59 @@
   resize: vertical;
 }
 
-/* Footer (Lastica Font) */
+/* Page Footer Styling (Matching Design) */
 .page-footer {
-  font-family: "Lastica", sans-serif;
+  height: 60px;
   text-align: right;
-  padding: 10px;
+  padding: 15px;
+  font-size: 20px;
+  color: #00000061; 
+  background-color: #d9d9d98e;
+  position: fixed;  
+  bottom: 0;
+  left: 0;         
+  right: 0;         
+  width: 100%;      
+}
+
+/* Clickable Footer Link Without Underline */
+.page-footer a {
+  font-family: "Lastica", sans-serif;
+  text-decoration: none; 
+  color: inherit; 
+  transition: color 0.3s ease;
+}
+
+.page-footer a:hover {
+  color: #00000080; /* Slightly darker on hover */
+}
+
+/* Question Container */
+.question-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between text and input */
+  margin-top: 10px;
+}
+
+/* ✅ Label Styling */
+.question-label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+  gap: 10px; /* Adds space between bullet and text */
+}
+
+/* ✅ Input Box Styling */
+.question-input {
+  width: 50px; /* Adjust width as needed */
+  height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-size: 14px;
-  color: #aaa;
+  text-align: center;
+  padding: 2px;
+  content: " ";
 }

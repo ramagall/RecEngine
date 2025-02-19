@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter } from "./global/global-components";
+import { ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput} from "./global/global-components";
 
 const FormPage = () => {
   const [progress, setProgress] = useState(25);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [textResponse, setTextResponse] = useState("");
+  const [serverCount, setServerCount] = useState(""); 
 
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
@@ -33,9 +34,17 @@ const FormPage = () => {
         placeholder="Type here..."
       />
 
+      <QuestionWithInput
+        label="How many servers are you backing up?"
+        name="serverCount"
+        value={serverCount}
+        onChange={(e) => setServerCount(e.target.value)}
+        placeholder = " "
+      />
+
       <Button label="Next Section" onClick={() => setProgress(progress + 25)} />
 
-      <PageFooter />
+      <PageFooter/>
     </div>
   );
 };
