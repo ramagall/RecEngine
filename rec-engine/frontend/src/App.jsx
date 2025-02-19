@@ -5,14 +5,14 @@ import './index.css'
 import LandingPage from './landing/landingpage.jsx';
 import Phones from './phones/phones1.jsx';
 import Phones2 from './phones/phones2.jsx';
-import GeneralTechnology from './GenralTechnologies.jsx';
+import GeneralTechnology from './general-technology.jsx';
 import { ProgressBar, CheckboxGroup } from './global/global-components.jsx';
-import FormPage from './ExamplePage.jsx';
+import FormPage from './example.jsx';
 
 
 function App() {
   return(
-    <FormPage></FormPage>
+    <LandingPage></LandingPage>
   );
 }
 

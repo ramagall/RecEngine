@@ -1,7 +1,4 @@
-import LandingPageHeader from '../LandingPageComponents/LandingPageHeader.jsx'
-import LandingPageTextFields from '../LandingPageComponents/LandingPageTextFields.jsx'
-import LandingPageButton from '../LandingPageComponents/LandingPageButton.jsx'
-import '../index.css'
+import {  LandingPageHeader, LandingPageButton, LandingPageTextFields} from './landing-components.jsx'
 
 function LandingPage() {
     return(
