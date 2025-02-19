@@ -1,27 +1,39 @@
 import React from "react";
+import "./global-components.css";
 
+// Progress Bar Component
 const ProgressBar = ({ progress }) => {
   return (
-    <div style={{ width: "100%", backgroundColor: "#e0e0e0", borderRadius: "10px", overflow: "hidden", marginBottom: "20px" }}>
-      <div style={{ width: `${progress}%`, height: "20px", backgroundColor: "lightcyan" }}></div>
+    <div className="progress-container">
+      <div className="progress-bar" style={{ width: `${progress}%` }}></div>
     </div>
   );
 };
 
+// Next Section & Next Page Button with Gradient
+const Button = ({ label, onClick, type = "button", className = "gradient-button" }) => {
+  return (
+    <button type={type} className={className} onClick={onClick}>
+      {label}
+    </button>
+  );
+};
+
+// Checkbox Group with Square Checkboxes
 const CheckboxGroup = ({ label, options, selectedOptions, onChange }) => {
   return (
-    <div style={{ marginBottom: "15px" }}>
-      <label style={{ fontWeight: "bold", display: "block" }}>{label}</label>
-      <div style={{ marginTop: "10px" }}>
+    <div className="checkbox-group">
+      <label className="question-label">{label}</label>
+      <div className="checkbox-options">
         {options.map((option) => (
-          <label key={option} style={{ display: "block", marginBottom: "5px" }}>
+          <label key={option} className="checkbox-item">
             <input
               type="checkbox"
               value={option}
               checked={selectedOptions.includes(option)}
               onChange={onChange}
-              style={{ marginRight: "10px" }}
             />
+            <span className="custom-checkbox"></span>
             {option}
           </label>
         ))}
@@ -29,4 +41,35 @@ const CheckboxGroup = ({ label, options, selectedOptions, onChange }) => {
     </div>
   );
 };
-export {ProgressBar, CheckboxGroup};
+
+// Global Textbox Component with Oval Bullet
+const Textbox = ({ label, name, value, onChange, placeholder }) => {
+  return (
+    <div className="textbox-container">
+      <label className="question-label">{label}</label>
+      <textarea
+        name={name}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        className="textbox-input"
+      />
+    </div>
+  );
+};
+
+// Page Header in Lastica Font
+const PageHeader = ({ title }) => {
+  return <h1 className="page-header">{title}</h1>;
+};
+
+// Page Footer in Lastica Font
+const PageFooter = () => {
+  return (
+    <footer className="page-footer">
+      <p>LAMBTELE.COM</p>
+    </footer>
+  );
+};
+
+export { ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter };

@@ -7,11 +7,12 @@ import Phones from './phones/phones1.jsx';
 import Phones2 from './phones/phones2.jsx';
 import GeneralTechnology from './GenralTechnologies.jsx';
 import { ProgressBar, CheckboxGroup } from './global/global-components.jsx';
+import FormPage from './TestPage.jsx';
 
 
 function App() {
   return(
-    <LandingPage></LandingPage>
+    <FormPage></FormPage>
   );
 }
 

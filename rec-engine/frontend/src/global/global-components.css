@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;600&family=Lastica&display=swap");
+
+* {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* Page Header */
+.page-header {
+  margin-left: 25px;
+  font-family: "Lastica", sans-serif;
+  font-size: 22px;
+  color: #b0b0b0;
+  padding: 15px 0;
+}
+
+/* Progress Bar */
+.progress-container {
+  margin-top: 20px;
+  margin-left: 25px;
+  margin-right: 15px;
+  width: 95%;
+  background-color: #EFF0F6;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 7px;
+  background-color: #47EBE2;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Buttons with Gradient */
+.gradient-button {
+  background: linear-gradient(to right, #47EBE2, #3BC4BC);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(to right, #47EBE2, #3BC4BC);
+}
+
+/* Oval Bullet for Questions (Not Bold) */
+.question-label {
+  margin-left: 20px;
+  font-weight: normal;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.question-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 6px;
+  background-color: #47EBE2;
+  border-radius: 50px;
+}
+
+/* Checkbox Group (Square with Checkmark) */
+.checkbox-group {
+  margin-bottom: 15px;
+}
+
+.checkbox-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.checkbox-item input {
+  display: none;
+}
+
+.custom-checkbox {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #47EBE2;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+
+.checkbox-item input:checked + .custom-checkbox {
+  background-color: #47EBE2;
+}
+
+.checkbox-item input:checked + .custom-checkbox::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Textbox */
+.textbox-container {
+  margin-top: 15px;
+}
+
+.textbox-input {
+  width: 80%;
+  margin-left: 49px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Footer (Lastica Font) */
+.page-footer {
+  font-family: "Lastica", sans-serif;
+  text-align: right;
+  padding: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
