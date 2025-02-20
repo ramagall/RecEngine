@@ -1,19 +1,19 @@
-import LandingPageHeader from './LandingPageComponents/LandingPageHeader.jsx'
-import LandingPageTextFields from './LandingPageComponents/LandingPageTextFields.jsx'
-import LandingPageButton from './LandingPageComponents/LandingPageButton.jsx'
-import './index.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './landing/landingpage.jsx';
 import Phones from './phones/phones1.jsx';
-import Phones2 from './phones/phones2.jsx';
-import GeneralTechnology from './general-technology.jsx';
-import { ProgressBar, CheckboxGroup } from './global/global-components.jsx';
-import FormPage from './example.jsx';
-
+import GeneralTechnology from './generaltech/general-technology.jsx';
 
 function App() {
-  return(
-    <LandingPage></LandingPage>
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/general-tech" element={<GeneralTechnology />} />
+        <Route path="/phones" element={<Phones />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App
+export default App;

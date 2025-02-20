@@ -1,192 +1,105 @@
-import React from 'react';
+import React, { useState } from "react";
+import { ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput } from "../global/global-components.jsx";
 
 const Phones = () => {
+  const [progress, setProgress] = useState(25);
+  
+  // Separate states for each input
+  const [phoneLicenses, setPhoneLicenses] = useState("");
+  const [activeUsers, setActiveUsers] = useState("");
+  const [courtesyPhones, setCourtesyPhones] = useState("");
+  const [physicalDevices, setPhysicalDevices] = useState("");
+  const [orgPhoneNumbers, setOrgPhoneNumbers] = useState("");
+  const [tollFreeNumbers, setTollFreeNumbers] = useState("");
+
+  // Separate states for textboxes
+  const [changeReason, setChangeReason] = useState("");
+  const [currentSystemLikes, setCurrentSystemLikes] = useState("");
+
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const handleCheckboxChange = (event) => {
+    const { value, checked } = event.target;
+    setSelectedOptions((prev) =>
+      checked ? [...prev, value] : prev.filter((item) => item !== value)
+    );
+  };
+
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px' }}>
-      {/* progress bar */}
-      <div style={{ width: '100%', backgroundColor: '#e0e0e0', borderRadius: '10px', overflow: 'hidden', marginBottom: '20px' }}>
-        {/* filling of the progress bar */}
-        <div style={{ width: '20%', height: '20px', backgroundColor: 'lightcyan' }}></div>
-      </div>
+    <div className="form-container">
+      <ProgressBar progress={progress} />
+      <PageHeader title="Let's Talk Phones" />
 
-      {/* title */}
-      <h1 style={{ textAlign: 'left', color: '#333' }}>Let's Talk Phones</h1>
+      <QuestionWithInput
+        label="Number of employees requiring phone licensing:"
+        name="phoneLicenses"
+        value={phoneLicenses}
+        onChange={(e) => setPhoneLicenses(e.target.value)}
+        placeholder=" "
+      />
+      <QuestionWithInput
+        label="How many active users?"
+        name="activeUsers"
+        value={activeUsers}
+        onChange={(e) => setActiveUsers(e.target.value)}
+        placeholder=" "
+      />
+      <QuestionWithInput
+        label="How many courtesy phones? (for public use)"
+        name="courtesyPhones"
+        value={courtesyPhones}
+        onChange={(e) => setCourtesyPhones(e.target.value)}
+        placeholder=" "
+      />
+      <QuestionWithInput
+        label="Number of employees requiring a physical device:"
+        name="physicalDevices"
+        value={physicalDevices}
+        onChange={(e) => setPhysicalDevices(e.target.value)}
+        placeholder=" "
+      />
+      <QuestionWithInput
+        label="How many phone numbers does the organization have?"
+        name="orgPhoneNumbers"
+        value={orgPhoneNumbers}
+        onChange={(e) => setOrgPhoneNumbers(e.target.value)}
+        placeholder=" "
+      />
+      <QuestionWithInput
+        label="How many toll-free numbers?"
+        name="tollFreeNumbers"
+        value={tollFreeNumbers}
+        onChange={(e) => setTollFreeNumbers(e.target.value)}
+        placeholder=" "
+      />
 
-        <div style={{ marginTop: '20px' }}>
-        <ul style={{ listStyleType: 'none', padding: '0', color: '#333' }}>
+      {/* Textbox Inputs */}
+      <Textbox
+        label="Why are you considering a change from your current system?"
+        name="changeReason"
+        value={changeReason}
+        onChange={(e) => setChangeReason(e.target.value)}
+        placeholder="Type here..."
+      />
+      <Textbox
+        label="What do you like about your current system?"
+        name="currentSystemLikes"
+        value={currentSystemLikes}
+        onChange={(e) => setCurrentSystemLikes(e.target.value)}
+        placeholder="Type here..."
+      />
 
-          {/* q 1 */}
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-            <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-            <label htmlFor="question1" style={{ marginRight: '10px' }}>
-              Number of employees requiring phone licensing:
-            </label>
-            <input
-              id="question1"
-              type="text"
-              placeholder="Enter your answer"
-              style={{
-                width: '130px',
-                maxWidth: '100%',
-                padding: '10px',
-                borderRadius: '5px',
-                border: '1px solid #ccc',
-              }}
-            />
-          </li>
+      {/* Checkbox */}
+      <CheckboxGroup
+        label="Do you require advanced reporting or analytics?"
+        options={["Yes", "No"]} 
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
 
-          {/* q 2 */}
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-            <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-            <label htmlFor="question2" style={{ marginRight: '10px' }}>How many active users?</label>
-            <input
-              id="question2"
-              type="text"
-              placeholder="Enter your answer"
-              style={{
-                width: '130px',
-                maxWidth: '100%',
-                padding: '10px',
-                borderRadius: '5px',
-                border: '1px solid #ccc',
-              }}
-            />
-          </li>
+      <Button label="Next Page" onClick={() => setProgress(progress + 25)} />
 
-          {/* q 3 */}
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-            <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-            <label htmlFor="question3" style={{ marginRight: '10px' }}>
-              How many courtesy phones? (for public use)
-            </label>
-            <input
-              id="question3"
-              type="text"
-              placeholder="Enter your answer"
-              style={{
-                width: '130px',
-                maxWidth: '100%',
-                padding: '10px',
-                borderRadius: '5px',
-                border: '1px solid #ccc',
-              }}
-            />
-          </li>
-
-          {/* q 4 */}
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-            <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-            <label htmlFor="question4" style={{ marginRight: '10px' }}>
-              Number of employees requiring a physical device:
-            </label>
-            <input
-              id="question4"
-              type="text"
-              placeholder="Enter your answer"
-              style={{
-                width: '130px',
-                maxWidth: '100%',
-                padding: '10px',
-                borderRadius: '5px',
-                border: '1px solid #ccc',
-              }}
-            />
-          </li>
-
-          {/* q 5 */}
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-            <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-            <label htmlFor="question5" style={{ marginRight: '10px' }}>
-              How many phone numbers does the organization currently have?
-            </label>
-            <input
-              id="question5"
-              type="text"
-              placeholder="Enter your answer"
-              style={{
-                width: '130px',
-                maxWidth: '100%',
-                padding: '10px',
-                borderRadius: '5px',
-                border: '1px solid #ccc',
-              }}
-            />
-          </li>
-
-          {/* q 6 */}
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-            <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-            <label htmlFor="question6" style={{ marginRight: '10px' }}>How many toll-free numbers?</label>
-            <input
-              id="question6"
-              type="text"
-              placeholder="Enter your answer"
-              style={{
-                width: '130px',
-                maxWidth: '100%',
-                padding: '10px',
-                borderRadius: '5px',
-                border: '1px solid #ccc',
-              }}
-            />
-          </li>
-        </ul>
-        <div style={{ marginTop: '30px' }}>
-          {/* q 7 */}
-          <div style={{ marginBottom: '20px' }}>
-            <p style={{ color: '#333', marginBottom: '10px' }}>
-              <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-              Are there any other solutions you are already considering?
-            </p>
-            <input
-              type="text"
-              placeholder="Enter your answer"
-              style={{
-                width: '100%',
-                padding: '10px',
-                borderRadius: '5px',
-                border: '1px solid #ccc',
-              }}
-            />
-          </div>
-
-          {/* q 8 */}
-          <div style={{ marginBottom: '20px' }}>
-            <p style={{ color: '#333', marginBottom: '10px' }}>
-              <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-              Why are you considering a change from your current system?
-            </p>
-            <input
-              type="text"
-              placeholder="Enter your answer"
-              style={{
-                width: '100%',
-                padding: '10px',
-                borderRadius: '5px',
-                border: '1px solid #ccc',
-              }}
-            />
-          </div>
-
-          {/* q 9 */}
-          <div style={{ marginBottom: '20px' }}>
-            <p style={{ color: '#333', marginBottom: '10px' }}>
-              <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-              What do you like about your current system?
-            </p>
-            <input
-              type="text"
-              placeholder="Enter your answer"
-              style={{
-                width: '100%',
-                padding: '10px',
-                borderRadius: '5px',
-                border: '1px solid #ccc',
-              }}
-            />
-          </div>
-        </div>
-      </div>
+      <PageFooter />
     </div>
   );
 };

@@ -1,0 +1,14 @@
+.gradient-button {
+  margin-top: 20px;
+}
+
+.textbox-input {
+    width: 60%;
+    margin-left: 105px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    min-height: 80px;
+    resize: vertical;
+  }

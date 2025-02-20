@@ -1,10 +1,9 @@
-import {  LandingPageHeader, LandingPageButton, LandingPageTextFields} from './landing-components.jsx'
+import { LandingPageHeader, LandingPageButton, LandingPageTextFields } from "./landing-components.jsx";
 
 function LandingPage() {
     return(
       <>
-        <div className="greyTop">
-        </div>
+        <div className="greyTop"></div>
         <a href="https://lambtele.com" className="homeNav">Home</a>
         <div>
           <LandingPageHeader/>
@@ -17,12 +16,12 @@ function LandingPage() {
         </div>
         <div className="footer">
           <div className="logo">
-            <img className="logoImg" src="/LambNoBackground.png" alt="Lamb Telecom Logo"></img>
+            <img className="logoImg" src="./assets/images/LambNoBackground.png" alt="Lamb Telecom Logo"></img>
           </div>
           <div className="contactInfo">
-            <h2 className='getInTouch'>
+            <h3 className='getInTouch'>
               GET IN TOUCH
-            </h2>
+            </h3>
             <h3 className='phoneNum'>
             +1(720) - 927 - 1997
             </h3>

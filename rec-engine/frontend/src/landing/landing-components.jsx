@@ -1,11 +1,10 @@
 import './landingpage.css'
+import TextField from '@mui/material/TextField';
+import { useNavigate } from "react-router-dom";
 
 function LandingPageButton(){
-    return(
-        <>
-            <button className="landingButton"> Start Questionarre</button>
-        </>
-    );
+    const navigate = useNavigate(); 
+    return(<button className="landingButton" onClick={() => navigate("/general-tech")}> Start Questionarre</button>);
 }
 
 function LandingPageTextFields() {
@@ -113,4 +112,4 @@ function LandingPageHeader() {
     );
     }
     
-    export default {  LandingPageHeader, LandingPageButton, LandingPageTextFields}
+export {LandingPageHeader, LandingPageButton, LandingPageTextFields}
