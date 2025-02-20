@@ -11,10 +11,15 @@ const GeneralTechnology = () => {
 
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
-    setSelectedOptions((prev) =>
-      checked ? [...prev, value] : prev.filter((item) => item !== value)
-    );
-  };
+    const updatedOptions = checked
+      ? [...selectedOptions, value]
+      : selectedOptions.filter((item) => item !== value);
+  
+    setSelectedOptions(updatedOptions);
+  
+    // Store the selection in localStorage
+    localStorage.setItem("selectedOptions", JSON.stringify(updatedOptions));
+  };  
 
   const handleNext = () => {
     if (selectedOptions.includes("Phones")) {
@@ -43,7 +48,7 @@ const GeneralTechnology = () => {
       />
 
       <Textbox
-        label="Describe your organization’s technological needs and any planned IT projects."
+        label="In a couple sentences, describe your organization’s technological needs and any planned IT projects."
         name="techNeeds"
         value={textResponse}
         onChange={(e) => setTextResponse(e.target.value)}
@@ -57,7 +62,6 @@ const GeneralTechnology = () => {
           setProgress(progress + 25); // Update progress
         }}
       />
-
       <PageFooter />
     </div>
   );

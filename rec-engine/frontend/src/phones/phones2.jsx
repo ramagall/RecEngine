@@ -1,66 +1,55 @@
-import React from 'react';
+import React, { useState } from "react";
+import { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput } from "../global/global-components.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Phones2 = () => {
+  const [progress, setProgress] = useState(50);
+  const navigate = useNavigate(); // ✅ Use navigation for moving pages
+  
+  // Separate states for each input
+  const [phoneLicenses, setPhoneLicenses] = useState("");
+  const [activeUsers, setActiveUsers] = useState("");
+  const [courtesyPhones, setCourtesyPhones] = useState("");
+  const [physicalDevices, setPhysicalDevices] = useState("");
+  const [orgPhoneNumbers, setOrgPhoneNumbers] = useState("");
+  const [tollFreeNumbers, setTollFreeNumbers] = useState("");
+
+  // Separate states for textboxes
+  const [changeReason, setChangeReason] = useState("");
+  const [currentSystemLikes, setCurrentSystemLikes] = useState("");
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const handleCheckboxChange = (event) => {
+    const { value, checked } = event.target;
+    setSelectedOptions((prev) =>
+      checked ? [...prev, value] : prev.filter((item) => item !== value)
+    );
+  };
+
+  const handleNext = () => {
+    navigate("/phones3");
+  };
+
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px' }}>
-      {/* progress bar */}
-      <div style={{ width: '100%', backgroundColor: '#e0e0e0', borderRadius: '10px', overflow: 'hidden', marginBottom: '20px' }}>
-        {/* filling progress bar */}
-        <div style={{ width: '70%', height: '20px', backgroundColor: 'lightcyan' }}></div>
-      </div>
+    <div className="form-container">
+      <GreyTop></GreyTop>
+      <ProgressBar progress={progress} />
+      <PageHeader title="Phones Continued" />
 
-      {/* title */}
-      <h1 style={{ textAlign: 'left', color: '#333' }}>Phones Continued </h1>
-
-      <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-  
-  
-  <div style={{ width: '45%' }}>
-    {/* q 1 */}
-    <li style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-      <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-      <label htmlFor="question1" style={{ marginRight: '10px' }}>
-        What phone system do you have today?
-      </label>
-    </li>
-    
-
-    {/* q 2 */}
-    <li style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-      <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-      <label htmlFor="question2" style={{ marginRight: '10px' }}>
-        What services would you like your system to integrate with?
-      </label>
-    </li>
-  </div>
-
-  <div style={{ width: '45%', textAlign: 'right' }}>
-    {/* q 3 */}
-    <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginBottom: '15px' }}>
-      <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-      <label htmlFor="question3">
-        How many phone lines do you currently have?
-      </label>
-    </li>
-
-    {/* q 4 */}
-    <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginBottom: '15px' }}>
-      <span style={{ color: 'cyan', marginRight: '10px' }}>---</span>
-      <label htmlFor="question4">
-        Do you need international calling capabilities?
-      </label>
-    </li>
-</div>
-
-</div>
-
-    {/* next page button */}
-    <div style={{ position: 'fixed', bottom: '20px', left: '20px' }}>
-    <button className="landingButton">Next Page</button>
-
+      {/* Checkbox */}
+      <CheckboxGroup
+        label="Do you need call recording?"
+        options={["Yes", "No"]} 
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+      <Button label="Next Page" 
+              onClick={() => {
+                handleNext();
+                setProgress(progress + 25); // Update progress
+              }} />
+      <PageFooter />
     </div>
-    </div>
-
   );
 };
 

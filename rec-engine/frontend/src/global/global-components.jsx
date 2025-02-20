@@ -64,7 +64,7 @@ const Textbox = ({ label, name, value, onChange, placeholder = "Type here..."}) 
   );
 };
 
-const QuestionWithInput = ({ label, name, value, onChange, placeholder = "Enter text..." }) => {
+const QuestionWithInput = ({ label, name, value, onChange, placeholder = " " }) => {
   return (
     <div className="question-container">
       <label className="question-label">

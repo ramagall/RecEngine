@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput } from "../global/global-components.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Phones = () => {
   const [progress, setProgress] = useState(25);
   
   // Separate states for each input
+  const navigate = useNavigate();
   const [phoneLicenses, setPhoneLicenses] = useState("");
   const [activeUsers, setActiveUsers] = useState("");
   const [courtesyPhones, setCourtesyPhones] = useState("");
@@ -23,6 +25,10 @@ const Phones = () => {
     setSelectedOptions((prev) =>
       checked ? [...prev, value] : prev.filter((item) => item !== value)
     );
+  };
+
+  const handleNext = () => {
+    navigate("/phones2");
   };
 
   return (
@@ -98,7 +104,11 @@ const Phones = () => {
         onChange={handleCheckboxChange}
       />
 
-      <Button label="Next Page" onClick={() => setProgress(progress + 25)} />
+      <Button label="Next Page" 
+        onClick={() => {
+          handleNext(); 
+          setProgress(progress + 25); // Update progress
+        }} />
 
       <PageFooter />
     </div>

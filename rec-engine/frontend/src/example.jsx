@@ -35,4 +35,18 @@ const FormPage = () => {
       />
 
       <QuestionWithInput
-        label="How many servers are you backing up
+        label="How many servers are you backing up?"
+        name="serverCount"
+        value={serverCount}
+        onChange={(e) => setServerCount(e.target.value)}
+        placeholder = " "
+      />
+
+      <Button label="Next Section" onClick={() => setProgress(progress + 25)} />
+
+      <PageFooter/>
+    </div>
+  );
+};
+
+export default FormPage;
