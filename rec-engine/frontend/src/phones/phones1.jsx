@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput } from "../global/global-components.jsx";
+import { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput } from "../global/global-components.jsx";
 
 const Phones = () => {
   const [progress, setProgress] = useState(25);
@@ -27,6 +27,7 @@ const Phones = () => {
 
   return (
     <div className="form-container">
+      <GreyTop></GreyTop>
       <ProgressBar progress={progress} />
       <PageHeader title="Let's Talk Phones" />
 

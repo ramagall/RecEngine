@@ -1,9 +1,11 @@
 import { LandingPageHeader, LandingPageButton, LandingPageTextFields } from "./landing-components.jsx";
+import { GreyTop } from "../global/global-components.jsx";
+import './landingpage.css';
 
 function LandingPage() {
     return(
       <>
-        <div className="greyTop"></div>
+        <GreyTop></GreyTop>
         <a href="https://lambtele.com" className="homeNav">Home</a>
         <div>
           <LandingPageHeader/>

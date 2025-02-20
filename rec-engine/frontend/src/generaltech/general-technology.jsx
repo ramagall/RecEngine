@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput } from "../global/global-components";
+import { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput } from "../global/global-components";
 import { useNavigate } from "react-router-dom";
 import './general-tech.css';
 
@@ -26,9 +26,15 @@ const GeneralTechnology = () => {
 
   return (
     <div className="form-container">
+      <GreyTop></GreyTop>
       <ProgressBar progress={progress} />
-      <PageHeader title="General Technology" />
-      
+      <PageHeader title="About you..." />
+      <CheckboxGroup
+        label="Are you a non-profit organization, religious institution, or school?"
+        options={["Yes", "No"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
       <CheckboxGroup
         label="What IT solutions are you looking for? (Select all that apply)"
         options={["Phones", "Internet", "Cybersecurity", "Backup & Disaster Recovery"]}

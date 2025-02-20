@@ -1,6 +1,11 @@
 import React from "react";
 import "./global-components.css";
 
+const GreyTop = ({ })=> {
+  return(
+    <div className="greyTop"></div>
+  )
+}
 // Progress Bar Component
 const ProgressBar = ({ progress }) => {
   return (
@@ -43,13 +48,13 @@ const CheckboxGroup = ({ label, options, selectedOptions, onChange }) => {
 };
 
 // Global Textbox Component with Oval Bullet
-const Textbox = ({ label, name, value, onChange, placeholder }) => {
+const Textbox = ({ label, name, value, onChange, placeholder = "Type here..."}) => {
   return (
     <div className="textbox-container">
       <label className="question-label">{label}</label>
       <textarea
         name={name}
-        maxLength={label.length}
+        maxLength={label ? label.length : 100}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
@@ -59,7 +64,7 @@ const Textbox = ({ label, name, value, onChange, placeholder }) => {
   );
 };
 
-const QuestionWithInput = ({ label, name, value, onChange, placeholder }) => {
+const QuestionWithInput = ({ label, name, value, onChange, placeholder = "Enter text..." }) => {
   return (
     <div className="question-container">
       <label className="question-label">
@@ -93,4 +98,4 @@ const PageFooter = () => {
   );
 };
 
-export { ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput};
+export { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput};
