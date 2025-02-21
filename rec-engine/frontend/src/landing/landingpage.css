@@ -160,6 +160,8 @@
 
 .logo {
     display:flex;
+    padding-left:.5rem;
+    padding-top: .5rem;
     max-width: 10rem;
     height: 100%;
 }
