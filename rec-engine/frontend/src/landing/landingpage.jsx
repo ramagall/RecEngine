@@ -18,7 +18,7 @@ function LandingPage() {
         </div>
         <div className="footer">
           <div className="logo">
-            <img className="logoImg" src="./assets/images/LambNoBackground.png" alt="Lamb Telecom Logo"></img>
+            <img className="logoImg" src="src/assets/images/LambNoBackground.png" alt="Lamb Telecom Logo"></img>
           </div>
           <div className="contactInfo">
             <h3 className='getInTouch'>
