@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput } from "../global/global-components";
 import { useNavigate } from "react-router-dom";
-import './backup-disaster-recovery.css';
+import './backup.css';
 
 const BackupDisasterRecovery = () => {
   const navigate = useNavigate();
