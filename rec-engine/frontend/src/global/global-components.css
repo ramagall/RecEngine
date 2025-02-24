@@ -190,6 +190,17 @@
   gap: 10px; /* Adds space between bullet and text */
 }
 
+/*Sub Question label*/
+.sub-question-label {
+  display: flex;
+  margin-left: 9rem;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  font-weight: normal;
+  gap: 10px; /* Adds space between bullet and text */
+}
+
 /* Input Box Styling */
 .question-input {
   width: 50px; /* Adjust width as needed */

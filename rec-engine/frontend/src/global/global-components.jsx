@@ -82,6 +82,34 @@ const QuestionWithInput = ({ label, name, value, onChange, placeholder = " " }) 
   );
 };
 
+const QuestionWithoutInput = ({label}) => {
+  return (
+    <div className="question-container">
+      <label className="question-label">
+        {label}
+      </label>
+    </div>
+  );
+};
+
+const SubQuestion = ({ label, name, value, onChange, placeholder = " " }) => {
+  return (
+    <div className="question-container">
+      <label className="sub-question-label">
+        {label}
+      </label>
+      <input
+        type="text"
+        name={name}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        className="question-input"
+      />
+    </div>
+  );
+};
+
 // Page Header in Lastica Font
 const PageHeader = ({title}) => {
   return <h1 className="page-header">{title}</h1>;
@@ -98,4 +126,4 @@ const PageFooter = () => {
   );
 };
 
-export { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput};
+export { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput, QuestionWithoutInput, SubQuestion};
