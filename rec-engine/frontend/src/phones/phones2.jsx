@@ -35,7 +35,30 @@ const Phones2 = () => {
       <GreyTop></GreyTop>
       <ProgressBar progress={progress} />
       <PageHeader title="Phones Continued" />
-
+    
+      {/* Checkbox */}
+      <CheckboxGroup
+        label="What phone system do you have today?"
+        options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Other:", "RingCentral", "8x8", "Ooma", "Vanage", "3CX", "Microsoft", "Zoom"]}
+        // options={["RingCentral", "8x8", "Ooma", "Vanage", "3CX", "Microsoft", "Zoom"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+      {/* Checkbox */}
+      <CheckboxGroup
+        label="What services would you like your system to integrate with?"
+        options={["Hubspot", "Google", "Salseforce", "Microsoft", "Zoho", "Other:"]} 
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+      {/* Checkbox */}
+      <CheckboxGroup
+        label="Are there any solutions you are already considering?"
+        options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Other:"]}
+        // options={["RingCentral", "8x8", "Ooma", "Vanage", "3CX", "Microsoft", "Zoom"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
       {/* Checkbox */}
       <CheckboxGroup
         label="Do you need call recording?"

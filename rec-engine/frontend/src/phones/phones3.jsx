@@ -31,7 +31,28 @@ const Phones3 = () => {
 
       {/* Fixed CheckboxGroup with state */}
       <CheckboxGroup
-        label="Do you need call recording?"
+        label="Do you currently have multiple Ethernet ports running to the phones?"
+        options={["Yes", "No", "Unsure"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+      {/* Fixed CheckboxGroup with state */}
+      <CheckboxGroup
+        label="Are Power over Ethernet (PoE) switches being used?"
+        options={["Yes", "No", "Unsure"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+      {/* Fixed CheckboxGroup with state */}
+      <CheckboxGroup
+        label="What features are you looking for (select all that apply)?"
+        options={["Mobile app", "Desktop app", "Chat capabilites", "Presence indicators", "Video chat", "Screen sharing", "Other:"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+      {/* Fixed CheckboxGroup with state */}
+      <CheckboxGroup
+        label="Do you use a fax machine?"
         options={["Yes", "No"]}
         selectedOptions={selectedOptions}
         onChange={handleCheckboxChange}
