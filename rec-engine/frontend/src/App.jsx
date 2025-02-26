@@ -6,7 +6,11 @@ import GeneralTechnology from './generaltech/general-technology.jsx';
 import Phones2 from './phones/phones2.jsx';
 import Phones3 from './phones/phones3.jsx';
 import Internet from './internet/internet1.jsx';
+import Internet2 from './internet/internet2.jsx';
+import Internet3 from './internet/internet3.jsx';
 import Cybersecurity from './cybersecurity/cybersecurity1.jsx';
+import Backup from './backup-disaster/backup1.jsx';
+import Backup2 from './backup-disaster/backup2.jsx';
 
 function App() {
   return (
@@ -18,7 +22,12 @@ function App() {
         <Route path="/phones2" element={<Phones2 />} />
         <Route path="/phones3" element={<Phones3 />} />
         <Route path="/internet" element={<Internet />} />
+        <Route path="/internet2" element={<Internet2 />} />
+        <Route path="/internet3" element={<Internet3 />} />
         <Route path="/cybersecurity" element={<Cybersecurity />} />
+        <Route path="/backup" element={<Backup />} />
+        <Route path="/backup2" element={<Backup2 />} />
+
       </Routes>
     </Router>
   );

@@ -23,7 +23,7 @@ const Cybersecurity = () => {
   };
 
   const handleNext = () => {
-    navigate("/");
+    navigate("/cybersecurity2");
   };
 
   return (

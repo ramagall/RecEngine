@@ -24,9 +24,13 @@ const GeneralTechnology = () => {
   const handleNext = () => {
     if (selectedOptions.includes("Phones")) {
       navigate("/phones");
-    } else {
-      alert("Please select 'Phones' to proceed.");
-    }
+    } if (selectedOptions.includes("Internet")) {
+      navigate("/internet");
+    } if (selectedOptions.includes("Cybersecurity")) {
+      navigate("/cybersecurity");
+    } if (selectedOptions.includes("Backup & Disaster Recovery")) {
+      navigate("/backup");
+    } 
   };
 
   return (

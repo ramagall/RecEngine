@@ -19,8 +19,14 @@ const Phones3 = () => {
     const storedOptions = JSON.parse(localStorage.getItem("selectedOptions")) || [];
 
     if (storedOptions.includes("Internet")) {
-      navigate("/internet1"); // Go to Internet1 if selected
-    } // We will put more conditions here later
+      navigate("/internet"); // Go to Internet1 if selected
+    } if (storedOptions.includes("Cybersecurity")) {
+      navigate("/cyber1"); // Go to Cyber1 if selected
+    } if (storedOptions.includes("Backup & Disaster Recovery")) {
+      navigate("/backup1"); // Go to backup1 if selected
+    } else {
+      navigate("/thanku");
+    }
   };
 
   return (

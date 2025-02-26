@@ -29,12 +29,25 @@ const Internet = () => {
 
       {/* Fixed CheckboxGroup */}
       <CheckboxGroup
-        label="Do you need call recording?"
-        options={["Yes", "No"]}
+        label="What internet companies have you already considered?"
+        options={["AT&T", "Spectrum", "Comcast", "Zayo", "Earthlink", "Crown Castle", "Cox", "Lumen", "Geolinks", "Other:"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+        columns={2}
+      />
+      <CheckboxGroup
+        label="What internet provider are you already using?"
+        options={["AT&T", "Spectrum", "Comcast", "Zayo", "Earthlink", "Crown Castle", "Cox", "Lumen", "Geolinks", "Other:"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+        columns={2}
+      />
+      <CheckboxGroup
+        label="Will you need routers or managed circuits/switches?"
+        options={["Yes", "No", "Unsure"]}
         selectedOptions={selectedOptions}
         onChange={handleCheckboxChange}
       />
-
       {/* Button with proper navigation */}
       <Button
         label="Next Page"
