@@ -41,6 +41,37 @@ const Internet2 = () => {
       <ProgressBar progress={progress} />
       <PageHeader title="Internet Continued" />
 
+      <CheckboxGroup
+        label="Do you have data centers? If so, how many?"
+        options={["Yes", "No"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+      <CheckboxGroup
+        label="Do you currently have firewalls?"
+        options={["Yes", "No"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+      <CheckboxGroup
+        label="Do you need to review firewall options?"
+        options={["Yes", "No"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+      <CheckboxGroup
+        label="Do you have more than one location?"
+        options={["Yes", "No"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+      <CheckboxGroup
+        label="If any, which voice services do you offer?"
+        options={["Analog Lines", "POTS", "PRI", "SIP", "Other:", "Not Applicable"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+        columns={2}
+      />
       <Button label="Next Page" 
               onClick={() => {
                 handleNext();

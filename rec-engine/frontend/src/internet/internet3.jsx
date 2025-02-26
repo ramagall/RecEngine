@@ -33,6 +33,21 @@ const Internet3 = () => {
       <ProgressBar progress={progress} />
       <PageHeader title="Internet Continued" />
 
+      <CheckboxGroup
+        label="Do you need to connect to any public cloud providers?"
+        options={["Yes", "No", "Unsure"]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+      />
+
+      <CheckboxGroup
+        label="Do you have any compliance or security requirements?"
+        options={["CCPA", "FDCC", "FEDRAMP", "FINRA", "ITAR", "NERC", "FISMA", "GDPR", "HIPPA", "NIST", "SOC2", "Other:" ]}
+        selectedOptions={selectedOptions}
+        onChange={handleCheckboxChange}
+        columns={2}
+      />
+      
       <Button
         label="Next Section"
         onClick={() => {
