@@ -3,7 +3,7 @@ import { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageF
 import { useNavigate } from "react-router-dom";
 import './backup.css';
 
-const BackupDisasterRecovery = () => {
+const Backup1 = () => {
   const navigate = useNavigate();
   const [progress, setProgress] = useState(50);
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -79,4 +79,4 @@ const BackupDisasterRecovery = () => {
   );
 };
 
-export default BackupDisasterRecovery;
+export default Backup1;
