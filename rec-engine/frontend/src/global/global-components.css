@@ -63,7 +63,7 @@
 .question-label {
   position: relative;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
   margin-bottom: 10px;
   margin-left: 100px; /* Keeps label away from the page edge */
@@ -73,7 +73,7 @@
 .question-label::before {
   content: "";
   position: absolute;
-  left: -30px;  /* 👈 Moves the bullet further away from text */
+  left: -30px; 
   top: 50%;
   transform: translateY(-50%);
   width: 30px;
@@ -88,11 +88,21 @@
 }
 
 .checkbox-options {
+  display: grid;  /* Enables grid layout */
+  gap: 8px; /* Adds space between checkboxes */
+}
+
+.checkbox-options {
   display: flex;
   margin-top: 10px;
   margin-left: 50px;
   font-size: 14px;
   flex-direction: column;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px); /* Splits into two columns */
 }
 
 .checkbox-item {

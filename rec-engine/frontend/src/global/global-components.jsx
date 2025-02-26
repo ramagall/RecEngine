@@ -25,11 +25,11 @@ const Button = ({ label, onClick, type = "button", className = "gradient-button"
 };
 
 // Checkbox Group with Square Checkboxes
-const CheckboxGroup = ({ label, options, selectedOptions, onChange }) => {
+const CheckboxGroup = ({ label, options, selectedOptions, onChange, otherValue, onOtherChange, columns = 1 }) => {
   return (
     <div className="checkbox-group">
       <label className="question-label">{label}</label>
-      <div className="checkbox-options">
+      <div className={`checkbox-options ${columns === 2 ? "checkbox-grid" : ""}`}>
         {options.map((option) => (
           <label key={option} className="checkbox-item">
             <input
@@ -40,6 +40,16 @@ const CheckboxGroup = ({ label, options, selectedOptions, onChange }) => {
             />
             <span className="custom-checkbox"></span>
             {option}
+            {option === "Other:" && (
+              <input
+                type="text"
+                name="other"
+                value={otherValue}
+                onChange={onOtherChange}
+                placeholder=" "
+                className="question-input"
+              />
+            )}
           </label>
         ))}
       </div>

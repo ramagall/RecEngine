@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Phones2 = () => {
   const [progress, setProgress] = useState(50);
-  const navigate = useNavigate(); // ✅ Use navigation for moving pages
+  const navigate = useNavigate(); 
   
   // Separate states for each input
   const [phoneLicenses, setPhoneLicenses] = useState("");
@@ -18,6 +18,7 @@ const Phones2 = () => {
   const [changeReason, setChangeReason] = useState("");
   const [currentSystemLikes, setCurrentSystemLikes] = useState("");
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const [otherText, setOtherText] = useState("");
 
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
@@ -30,6 +31,10 @@ const Phones2 = () => {
     navigate("/phones3");
   };
 
+  const handleOtherChange = (event) => {
+    setOtherText(event.target.value);
+  };
+
   return (
     <div className="form-container">
       <GreyTop></GreyTop>
@@ -39,10 +44,12 @@ const Phones2 = () => {
       {/* Checkbox */}
       <CheckboxGroup
         label="What phone system do you have today?"
-        options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Other:", "RingCentral", "8x8", "Ooma", "Vanage", "3CX", "Microsoft", "Zoom"]}
-        // options={["RingCentral", "8x8", "Ooma", "Vanage", "3CX", "Microsoft", "Zoom"]}
+        options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Zoom", "RingCentral", "8x8", "Ooma", "Vanage", "3CX", "Microsoft", "Other:"]}
         selectedOptions={selectedOptions}
         onChange={handleCheckboxChange}
+        otherValue={otherText}
+        onOtherChange={handleOtherChange}
+        columns={2} 
       />
       {/* Checkbox */}
       <CheckboxGroup
@@ -55,7 +62,6 @@ const Phones2 = () => {
       <CheckboxGroup
         label="Are there any solutions you are already considering?"
         options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Other:"]}
-        // options={["RingCentral", "8x8", "Ooma", "Vanage", "3CX", "Microsoft", "Zoom"]}
         selectedOptions={selectedOptions}
         onChange={handleCheckboxChange}
       />
