@@ -19,10 +19,10 @@ const Phones = () => {
   const [currentSystemLikes, setCurrentSystemLikes] = useState("");
 
   const [selectedOptions, setSelectedOptions] = useState([]);
-
-  const handleCheckboxChange = (event) => {
+  const [phones1Q1, setPhones1Q1] = useState([]);
+  const handleCheckboxChange = (setOption) => (event) => {
     const { value, checked } = event.target;
-    setSelectedOptions((prev) =>
+    setOption((prev) =>
       checked ? [...prev, value] : prev.filter((item) => item !== value)
     );
   };
@@ -100,8 +100,8 @@ const Phones = () => {
       <CheckboxGroup
         label="Do you require advanced reporting or analytics?"
         options={["Yes", "No"]} 
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={phones1Q1}
+        onChange={handleCheckboxChange(setPhones1Q1)}
       />
 
       <Button label="Next Page" 

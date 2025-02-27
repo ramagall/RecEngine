@@ -11,11 +11,12 @@ const Internet = () => {
   const [internetProviderUsiing, setInternetProviderUsing] = useState([]);
   const [internetRouters, setInternetRouters] = useState([]);
 
+  
 
   // Handle Checkbox Selection
-  const handleCheckboxChange = (setOptions) => (event) => {
+  const handleCheckboxChange = (setOption) => (event) => {
     const { value, checked } = event.target;
-    setOptions((prev) =>
+    setOption((prev) =>
       checked ? [...prev, value] : prev.filter((item) => item !== value)
     );
   };

@@ -10,6 +10,10 @@ const Backup = () => {
   const [vendorResponse, setVendorResponse] = useState("");
   const [backupPlatform, setBackupPlatform] = useState("");
   
+  const [backup1Q1, setbackup1Q1] = useState([]);
+  const [backup1Q2, setbackup1Q2] = useState([]);
+  const [backup1Q3, setbackup1Q3] = useState([]);
+
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
     const updatedOptions = checked

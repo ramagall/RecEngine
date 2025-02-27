@@ -15,9 +15,9 @@ const Cybersecurity3 = () => {
 
   const [selectedOptions, setSelectedOptions] = useState([]);
 
-  const handleCheckboxChange = (event) => {
+  const handleCheckboxChange = (setOption) => (event) => { 
     const { value, checked } = event.target;
-    setSelectedOptions((prev) =>
+    setOption((prev) =>
       checked ? [...prev, value] : prev.filter((item) => item !== value)
     );
   };
@@ -30,7 +30,7 @@ const Cybersecurity3 = () => {
     <div className="form-container">
         <GreyTop></GreyTop>
         <ProgressBar progress={progress} />
-        <PageHeader title="Cybersecurity" />
+        <PageHeader title="Cybersecurity Continued" />
 
         <Textbox
             label="List some of the most common cloud apps or services your organization uses:"

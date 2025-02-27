@@ -20,9 +20,18 @@ const Internet2 = () => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [otherText, setOtherText] = useState("");
 
-  const handleCheckboxChange = (event) => {
+  const [internet2Q1, setInternet2Q1] = useState([]);
+  const [internet2Q2, setInternet2Q2] = useState([]);
+  const [internet2Q3, setInternet2Q3] = useState([]);
+  const [internet2Q4, setInternet2Q4] = useState([]);
+  const [internet2Q5, setInternet2Q5] = useState([]);
+  const [internet2Q6, setInternet2Q6] = useState([]);
+  const [internet2Q7, setInternet2Q7] = useState([]);
+  const [internet2Q8, setInternet2Q8] = useState([]);
+
+  const handleCheckboxChange = (setOption) => (event) => {
     const { value, checked } = event.target;
-    setSelectedOptions((prev) =>
+    setOption((prev) =>
       checked ? [...prev, value] : prev.filter((item) => item !== value)
     );
   };
@@ -44,32 +53,32 @@ const Internet2 = () => {
       <CheckboxGroup
         label="Do you have data centers? If so, how many?"
         options={["Yes", "No"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={internet2Q1}
+        onChange={handleCheckboxChange(setInternet2Q1)}
       />
       <CheckboxGroup
         label="Do you currently have firewalls?"
         options={["Yes", "No"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={internet2Q2}
+        onChange={handleCheckboxChange(setInternet2Q2)}
       />
       <CheckboxGroup
         label="Do you need to review firewall options?"
         options={["Yes", "No"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={internet2Q3}
+        onChange={handleCheckboxChange(setInternet2Q3)}
       />
       <CheckboxGroup
         label="Do you have more than one location?"
         options={["Yes", "No"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={internet2Q4}
+        onChange={handleCheckboxChange(setInternet2Q4)}
       />
       <CheckboxGroup
         label="If any, which voice services do you offer?"
         options={["Analog Lines", "POTS", "PRI", "SIP", "Other:", "Not Applicable"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={internet2Q5}
+        onChange={handleCheckboxChange(setInternet2Q5)}
         columns={2}
       />
       <Button label="Next Page" 

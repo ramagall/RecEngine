@@ -5,11 +5,17 @@ import { GreyTop, ProgressBar, Button, CheckboxGroup, PageHeader, PageFooter } f
 const Phones3 = () => {
   const [progress, setProgress] = useState(75);
   const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const [phones3Q1, setPhones3Q1] = useState([]);
+  const [phones3Q2, setPhones3Q2] = useState([]);
+  const [phones3Q3, setPhones3Q3] = useState([]);
+  const [phones3Q4, setPhones3Q4] = useState([]);
+
   const navigate = useNavigate();
 
-  const handleCheckboxChange = (event) => {
+  const handleCheckboxChange = (setOption) => (event) => {
     const { value, checked } = event.target;
-    setSelectedOptions((prev) =>
+    setOption((prev) =>
       checked ? [...prev, value] : prev.filter((item) => item !== value)
     );
   };
@@ -39,29 +45,29 @@ const Phones3 = () => {
       <CheckboxGroup
         label="Do you currently have multiple Ethernet ports running to the phones?"
         options={["Yes", "No", "Unsure"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={phones3Q1}
+        onChange={handleCheckboxChange(setPhones3Q1)}
       />
       {/* Fixed CheckboxGroup with state */}
       <CheckboxGroup
         label="Are Power over Ethernet (PoE) switches being used?"
         options={["Yes", "No", "Unsure"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={phones3Q2}
+        onChange={handleCheckboxChange(setPhones3Q2)}
       />
       {/* Fixed CheckboxGroup with state */}
       <CheckboxGroup
         label="What features are you looking for (select all that apply)?"
         options={["Mobile app", "Desktop app", "Chat capabilites", "Presence indicators", "Video chat", "Screen sharing", "Other:"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={phones3Q3}
+        onChange={handleCheckboxChange(setPhones3Q3)}
       />
       {/* Fixed CheckboxGroup with state */}
       <CheckboxGroup
         label="Do you use a fax machine?"
         options={["Yes", "No"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={phones3Q4}
+        onChange={handleCheckboxChange(setPhones3Q4)}
       />
 
       <Button

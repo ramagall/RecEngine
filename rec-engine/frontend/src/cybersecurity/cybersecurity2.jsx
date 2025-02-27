@@ -15,9 +15,11 @@ const Cybersecurity2 = () => {
 
   const [selectedOptions, setSelectedOptions] = useState([]);
 
-  const handleCheckboxChange = (event) => {
+  const [cyber2Q1, setCyber2Q1] = useState([]);
+
+  const handleCheckboxChange = (setOption) => (event) => {
     const { value, checked } = event.target;
-    setSelectedOptions((prev) =>
+    setOption((prev) =>
       checked ? [...prev, value] : prev.filter((item) => item !== value)
     );
   };
@@ -30,13 +32,13 @@ const Cybersecurity2 = () => {
     <div className="form-container">
         <GreyTop></GreyTop>
         <ProgressBar progress={progress} />
-        <PageHeader title="Cybersecurity" />
+        <PageHeader title="Cybersecurity Continued" />
 
         <CheckboxGroup
             label="What is your current email platform and license type/tier?"
             options={["Microsoft", "Google", "Other"]} 
-            selectedOptions={selectedOptions}
-            onChange={handleCheckboxChange}
+            selectedOptions={cyber2Q1}
+            onChange={handleCheckboxChange(setCyber2Q1)}
         />
 
         <SubQuestion

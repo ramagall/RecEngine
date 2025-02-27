@@ -15,9 +15,11 @@ const Cybersecurity = () => {
 
   const [selectedOptions, setSelectedOptions] = useState([]);
 
-  const handleCheckboxChange = (event) => {
+  const [cyber1Q1, setCyber1Q1] = useState([]);
+  
+  const handleCheckboxChange = (setOption) => (event) => {
     const { value, checked } = event.target;
-    setSelectedOptions((prev) =>
+    setOption((prev) =>
       checked ? [...prev, value] : prev.filter((item) => item !== value)
     );
   };
@@ -83,8 +85,8 @@ const Cybersecurity = () => {
         <CheckboxGroup
             label="Has there been a recent event that prompted this discussion of security? If yes, explain"
             options={["Yes", "No"]} 
-            selectedOptions={selectedOptions}
-            onChange={handleCheckboxChange}
+            selectedOptions={cyber1Q1}
+            onChange={handleCheckboxChange(setCyber1Q1)}
         />
 
         <Button label="Next Page" 
