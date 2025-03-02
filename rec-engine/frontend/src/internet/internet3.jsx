@@ -7,9 +7,12 @@ const Internet3 = () => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const navigate = useNavigate();
 
-  const handleCheckboxChange = (event) => {
+  const [internet3Q1, setInternet3Q1] = useState([]);
+  const [internet3Q2, setInternet3Q2] = useState([]);
+
+  const handleCheckboxChange = (setOption) => (event) => {
     const { value, checked } = event.target;
-    setSelectedOptions((prev) =>
+    setOption((prev) =>
       checked ? [...prev, value] : prev.filter((item) => item !== value)
     );
   };
@@ -36,18 +39,18 @@ const Internet3 = () => {
       <CheckboxGroup
         label="Do you need to connect to any public cloud providers?"
         options={["Yes", "No", "Unsure"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={internet3Q1}
+        onChange={handleCheckboxChange(setInternet3Q1)}
       />
 
       <CheckboxGroup
         label="Do you have any compliance or security requirements?"
         options={["CCPA", "FDCC", "FEDRAMP", "FINRA", "ITAR", "NERC", "FISMA", "GDPR", "HIPPA", "NIST", "SOC2", "Other:" ]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
+        selectedOptions={internet3Q2}
+        onChange={handleCheckboxChange(setInternet3Q2)}
         columns={2}
       />
-      
+
       <Button
         label="Next Section"
         onClick={() => {

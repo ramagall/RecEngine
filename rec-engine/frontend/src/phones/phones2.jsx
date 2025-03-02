@@ -8,9 +8,14 @@ const Phones2 = () => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [otherText, setOtherText] = useState("");
 
-  const handleCheckboxChange = (event) => {
+  const [phones2Q1, setPhones2Q1] = useState([]);
+  const [phones2Q2, setPhones2Q2] = useState([]);
+  const [phones2Q3, setPhones2Q3] = useState([]);
+  const [phones2Q4, setPhones2Q4] = useState([]);
+
+  const handleCheckboxChange = (setOption) => (event) => {
     const { value, checked } = event.target;
-    setSelectedOptions((prev) =>
+    setOption((prev) =>
       checked ? [...prev, value] : prev.filter((item) => item !== value)
     );
   };
@@ -35,17 +40,17 @@ const Phones2 = () => {
           <CheckboxGroup
             label="What phone system do you have today?"
             options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Zoom", "RingCentral", "8x8", "Ooma", "Vonage", "3CX", "Microsoft", "Other:"]}
-            selectedOptions={selectedOptions}
-            onChange={handleCheckboxChange}
+            selectedOptions={phones2Q1}
+            onChange={handleCheckboxChange(setPhones2Q1)}
             otherValue={otherText}
             onOtherChange={handleOtherChange}
-            columns={2} 
+            columns={2}
           />
           <CheckboxGroup
             label="Are there any solutions you are already considering?"
             options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Other:"]}
-            selectedOptions={selectedOptions}
-            onChange={handleCheckboxChange}
+            selectedOptions={phones2Q3}
+            onChange={handleCheckboxChange(setPhones2Q3)}
           />
         </div>
         
@@ -54,14 +59,14 @@ const Phones2 = () => {
           <CheckboxGroup
             label="What services would you like your system to integrate with?"
             options={["Hubspot", "Google", "Salesforce", "Microsoft", "Zoho", "Other:"]} 
-            selectedOptions={selectedOptions}
-            onChange={handleCheckboxChange}
+            selectedOptions={phones2Q2}
+            onChange={handleCheckboxChange(setPhones2Q2)}
           />
           <CheckboxGroup
             label="Do you need call recording?"
             options={["Yes", "No"]} 
-            selectedOptions={selectedOptions}
-            onChange={handleCheckboxChange}
+            selectedOptions={phones2Q4}
+            onChange={handleCheckboxChange(setPhones2Q4)}
           />
         </div>
       </div>
