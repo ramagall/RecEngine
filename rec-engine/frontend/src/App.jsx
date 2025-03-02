@@ -11,6 +11,7 @@ import Internet3 from './internet/internet3.jsx';
 import Cybersecurity from './cybersecurity/cybersecurity1.jsx';
 import Cybersecurity2 from './cybersecurity/cybersecurity2.jsx';
 import Cybersecurity3 from './cybersecurity/cybersecurity3.jsx';
+import Cybersecurity4 from './cybersecurity/cybersecurity4.jsx';
 import Backup from './backup-disaster/backup1.jsx';
 import Backup2 from './backup-disaster/backup2.jsx';
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/cybersecurity" element={<Cybersecurity />} />
         <Route path="/cybersecurity2" element={<Cybersecurity2 />} />
         <Route path="/cybersecurity3" element={<Cybersecurity3 />} />
+        <Route path="/cybersecurity4" element={<Cybersecurity4 />} />
         <Route path="/backup" element={<Backup />} />
         <Route path="/backup2" element={<Backup2 />} />
 
