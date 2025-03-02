@@ -18,13 +18,13 @@ const Internet3 = () => {
   const handleNext = () => {
     const storedOptions = JSON.parse(localStorage.getItem("selectedOptions")) || [];
 
-    if (storedOptions.includes("Cybersecurity")) {
-      navigate("/cyber1"); // Go to Cyber1 if selected
-    } if (storedOptions.includes("Backup & Disaster Recovery")) {
-      navigate("/backup1"); // Go to backup1 if selected
+    if (storedOptions.includes("Backup & Disaster Recovery")) {
+      navigate("/backup"); // Go to Cyber1 if selected
+    } if (storedOptions.includes("Cybersecurity")) {
+      navigate("/cybersecurity"); // Go to backup1 if selected
     } else {
         navigate("/thanku");
-      }
+    }
   };
 
   return (

@@ -22,14 +22,14 @@ const GeneralTechnology = () => {
   };  
 
   const handleNext = () => {
-    if (selectedOptions.includes("Phones")) {
-      navigate("/phones");
-    } if (selectedOptions.includes("Internet")) {
-      navigate("/internet");
+    if (selectedOptions.includes("Backup & Disaster Recovery")) {
+      navigate("/backup"); 
     } if (selectedOptions.includes("Cybersecurity")) {
       navigate("/cybersecurity");
-    } if (selectedOptions.includes("Backup & Disaster Recovery")) {
-      navigate("/backup");
+    } if (selectedOptions.includes("Internet")) {
+      navigate("/internet");
+    } if (selectedOptions.includes("Phones")) {
+      navigate("/phones");
     } 
   };
 
