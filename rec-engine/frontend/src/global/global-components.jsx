@@ -40,16 +40,8 @@ const CheckboxGroup = ({ label, options, selectedOptions, onChange, otherValue, 
             />
             <span className="custom-checkbox"></span>
             {option}
-            {option === "Other:" && (
-              <input
-                type="text"
-                name="other"
-                value={otherValue}
-                onChange={onOtherChange}
-                placeholder=" "
-                className="question-input"
-              />
-            )}
+            {option === "Other:" ? (<input type="text"></input>) : <p></p> }
+            {option === "Yes:" ? (<input type="text"></input>) : <p></p> }
           </label>
         ))}
       </div>

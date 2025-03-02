@@ -82,7 +82,7 @@ const Cybersecurity = () => {
 
         <CheckboxGroup
             label="Has there been a recent event that prompted this discussion of security? If yes, explain"
-            options={["Yes", "No"]} 
+            options={["Yes:", "No"]} 
             selectedOptions={selectedOptions}
             onChange={handleCheckboxChange}
         />

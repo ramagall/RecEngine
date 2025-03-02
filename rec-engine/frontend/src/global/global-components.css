@@ -102,7 +102,7 @@
 
 .checkbox-grid {
   display: grid;
-  grid-template-columns: repeat(2, 200px); /* Splits into two columns */
+  grid-template-columns: repeat(2, 220px); /* Splits into two columns */
 }
 
 .checkbox-item {
@@ -115,6 +115,12 @@
 
 .checkbox-item input {
   display: none;
+}
+
+.checkbox-item input[type=text] {
+  display: flex;
+  margin-left: .2rem;
+  width: 4.167rem;
 }
 
 .custom-checkbox {
