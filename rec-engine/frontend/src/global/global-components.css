@@ -84,7 +84,7 @@
 
 /* Checkbox Group (Square with Checkmark) */
 .checkbox-group {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .checkbox-options {
@@ -194,7 +194,7 @@
 .question-label {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
   font-weight: normal;
   gap: 10px; /* Adds space between bullet and text */

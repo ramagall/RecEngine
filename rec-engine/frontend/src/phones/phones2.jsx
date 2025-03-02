@@ -1,22 +1,10 @@
 import React, { useState } from "react";
-import { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput } from "../global/global-components.jsx";
+import { GreyTop, ProgressBar, Button, CheckboxGroup, PageHeader, PageFooter } from "../global/global-components.jsx";
 import { useNavigate } from "react-router-dom";
 
 const Phones2 = () => {
   const [progress, setProgress] = useState(50);
   const navigate = useNavigate(); 
-  
-  // Separate states for each input
-  const [phoneLicenses, setPhoneLicenses] = useState("");
-  const [activeUsers, setActiveUsers] = useState("");
-  const [courtesyPhones, setCourtesyPhones] = useState("");
-  const [physicalDevices, setPhysicalDevices] = useState("");
-  const [orgPhoneNumbers, setOrgPhoneNumbers] = useState("");
-  const [tollFreeNumbers, setTollFreeNumbers] = useState("");
-
-  // Separate states for textboxes
-  const [changeReason, setChangeReason] = useState("");
-  const [currentSystemLikes, setCurrentSystemLikes] = useState("");
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [otherText, setOtherText] = useState("");
 
@@ -37,46 +25,54 @@ const Phones2 = () => {
 
   return (
     <div className="form-container">
-      <GreyTop></GreyTop>
+      <GreyTop />
       <ProgressBar progress={progress} />
       <PageHeader title="Phones Continued" />
-    
-      {/* Checkbox */}
-      <CheckboxGroup
-        label="What phone system do you have today?"
-        options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Zoom", "RingCentral", "8x8", "Ooma", "Vanage", "3CX", "Microsoft", "Other:"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
-        otherValue={otherText}
-        onOtherChange={handleOtherChange}
-        columns={2} 
+      
+      <div className="grid-container" style={{ display: "grid", gridTemplateColumns: "0.75fr 0.75fr"}}>
+        {/* Left Column */}
+        <div className="grid-item">
+          <CheckboxGroup
+            label="What phone system do you have today?"
+            options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Zoom", "RingCentral", "8x8", "Ooma", "Vonage", "3CX", "Microsoft", "Other:"]}
+            selectedOptions={selectedOptions}
+            onChange={handleCheckboxChange}
+            otherValue={otherText}
+            onOtherChange={handleOtherChange}
+            columns={2} 
+          />
+          <CheckboxGroup
+            label="Are there any solutions you are already considering?"
+            options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Other:"]}
+            selectedOptions={selectedOptions}
+            onChange={handleCheckboxChange}
+          />
+        </div>
+        
+        {/* Right Column */}
+        <div className="grid-item">
+          <CheckboxGroup
+            label="What services would you like your system to integrate with?"
+            options={["Hubspot", "Google", "Salesforce", "Microsoft", "Zoho", "Other:"]} 
+            selectedOptions={selectedOptions}
+            onChange={handleCheckboxChange}
+          />
+          <CheckboxGroup
+            label="Do you need call recording?"
+            options={["Yes", "No"]} 
+            selectedOptions={selectedOptions}
+            onChange={handleCheckboxChange}
+          />
+        </div>
+      </div>
+      
+      <Button 
+        label="Next Page" 
+        onClick={() => {
+          handleNext();
+          setProgress(progress + 25); // Update progress
+        }} 
       />
-      {/* Checkbox */}
-      <CheckboxGroup
-        label="What services would you like your system to integrate with?"
-        options={["Hubspot", "Google", "Salseforce", "Microsoft", "Zoho", "Other:"]} 
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
-      />
-      {/* Checkbox */}
-      <CheckboxGroup
-        label="Are there any solutions you are already considering?"
-        options={["Avaya", "Cisco", "Mitel", "Nextiva", "Dialpad", "GoTo", "Teams", "Other:"]}
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
-      />
-      {/* Checkbox */}
-      <CheckboxGroup
-        label="Do you need call recording?"
-        options={["Yes", "No"]} 
-        selectedOptions={selectedOptions}
-        onChange={handleCheckboxChange}
-      />
-      <Button label="Next Page" 
-              onClick={() => {
-                handleNext();
-                setProgress(progress + 25); // Update progress
-              }} />
       <PageFooter />
     </div>
   );
