@@ -66,7 +66,7 @@ const Cybersecurity4 = () => {
             onChange={handleCheckboxChange}
         />
 
-        <Button label="Next Page" 
+        <Button label="Next Section" 
                     onClick={() => {
                     handleNext(); 
                     setProgress(progress + 25); // Update progress
