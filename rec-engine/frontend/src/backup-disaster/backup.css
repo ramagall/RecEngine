@@ -1,1 +1,48 @@
+.backup2-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+}
+
+.backup2-container .form-section {
+  margin-bottom: 20px;
+}
+
+.backup2-container .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.backup2-container .input-group label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.backup2-container .input-group input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.backup2-container .button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.backup2-container .button-container button {
+  background-color: #30d5c8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.backup2-container .button-container button:hover {
+  background-color: #28b3a3;
+}
 
