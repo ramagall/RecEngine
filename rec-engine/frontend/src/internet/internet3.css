@@ -1,0 +1,11 @@
+#yesinput {
+    display: flex;
+    margin-left: .5rem;
+    width: 30.5rem;
+    height: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    content: " ";
+}

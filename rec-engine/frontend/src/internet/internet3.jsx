@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { GreyTop, ProgressBar, Button, CheckboxGroup, PageHeader, PageFooter } from "../global/global-components.jsx";
-
+import "./internet3.css"
 const Internet3 = () => {
   const [progress, setProgress] = useState(75);
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -36,9 +36,9 @@ const Internet3 = () => {
       <ProgressBar progress={progress} />
       <PageHeader title="Internet Continued" />
 
-      <CheckboxGroup
-        label="Do you need to connect to any public cloud providers?"
-        options={["Yes", "No", "Unsure"]}
+      <CheckboxGroup className="test"
+        label="Do you need to connect to any public cloud providers? If yes, which ones?"
+        options={["Yes:", "No", "Unsure"]}
         selectedOptions={internet3Q1}
         onChange={handleCheckboxChange(setInternet3Q1)}
       />
