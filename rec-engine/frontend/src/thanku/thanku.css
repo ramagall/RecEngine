@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;600&family=Lastica&display=swap");
+
+@font-face {
+    font-family: Lastica;
+    src: url(./src/assets/fonts/Lastica.ttf);
+}
+
+.tagLine {
+    display: flex;
+    width: 90%;
+    min-height: 92px;
+    justify-content: center;
+    color: black;
+    font-size: 40px;
+    font-family: Lastica;
+    font-weight: 300;
+    margin: 0px auto;
+    margin-bottom: 2px;
+}
+
+.h1 {
+    font-family: 'Lastica'; 
+}
+
+.getInTouch{
+    font-family: "Lastica";
+}
+
+.phoneNum {
+    font-family: "Lexend Deca";
+}
+
+.thankUSubtitle {
+    display: flex;
+    width: 40%;
+    min-height: 139px;
+    color: #797575;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Lexend Deca";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.thankUHeader { 
+    flex-grow: 1;
+    margin-top: 225px;
+    width: 100%;
+}
+
+.homeNav {
+    text-decoration: none; 
+    font-family: "Lastica";
+    color: #00000061;
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 18px;
+}
+
+.homeNav:hover {
+    color: #00000081;
+}
+
+.thankUHeader {
+    justify-content: center;
+}
+
+.test {
+    width: 50ch;
+}
+  
+.footer {
+    display: flex;
+    bottom: 0;
+    right: 0;
+    margin-top: auto;
+    width: 100%;
+    height: 120px;
+    flex-shrink: 0;
+    background: rgba(217, 217, 217, 0.45);
+    justify-content: space-between;
+    align-items:center;
+}
+
+.logo {
+    display:flex;
+    padding-left:.5rem;
+    padding-top: .5rem;
+    max-width: 10rem;
+    height: 100%;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    padding-right: 2rem;
+    padding-left: 0rem;
+}
+
+.logoImg {
+    width: 100%;
+}
+
+.phoneNum {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #5B5A5A;
+}
+
+@media (max-width: 374px) {
+    .contactInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        padding: 0rem;
+    }
+}

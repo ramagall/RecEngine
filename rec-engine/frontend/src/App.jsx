@@ -14,6 +14,7 @@ import Cybersecurity3 from './cybersecurity/cybersecurity3.jsx';
 import Cybersecurity4 from './cybersecurity/cybersecurity4.jsx';
 import Backup from './backup-disaster/backup1.jsx';
 import Backup2 from './backup-disaster/backup2.jsx';
+import ThankU from './thanku/thanku.jsx'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/cybersecurity4" element={<Cybersecurity4 />} />
         <Route path="/backup" element={<Backup />} />
         <Route path="/backup2" element={<Backup2 />} />
+        <Route path="/thanku" element={<ThankU />} />
 
       </Routes>
     </Router>
