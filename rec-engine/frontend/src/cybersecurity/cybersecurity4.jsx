@@ -23,6 +23,8 @@ const Cybersecurity4 = () => {
   };
 
   const handleNext = () => {
+    const storedOptions = JSON.parse(localStorage.getItem("selectedOptions")) || [];
+
     if (storedOptions.includes("Backup & Disaster Recovery")) {
       navigate("/backup"); // Go to Cyber1 if selected
     } 
