@@ -10,7 +10,11 @@ const Internet = () => {
   const [internetCompaniesConsidered, setInternetCompaniesConsidered] = useState([]);
   const [internetProviderUsiing, setInternetProviderUsing] = useState([]);
   const [internetRouters, setInternetRouters] = useState([]);
-
+  const [internet1Q1, setInternet1Q1] = useState([]);
+  const [internet1Q2, setInternet1Q2] = useState([]);
+  const [internet1Q3, setInternet1Q3] = useState([]);
+  const [internet1Q4, setInternet1Q4] = useState([]);
+  const [internet1Q5, setInternet1Q5] = useState([]);
   
 
   // Handle Checkbox Selection
@@ -38,22 +42,22 @@ const Internet = () => {
                 <CheckboxGroup
                   label="What internet companies have you already considered?"
                   options={["AT&T", "Spectrum", "Comcast", "Zayo", "Earthlink", "Crown Castle", "Cox", "Lumen", "Geolinks", "Other:"]}
-                  selectedOptions={internetCompaniesConsidered}
-                  onChange={handleCheckboxChange(setInternetCompaniesConsidered)}
+                  selectedOptions={internet1Q1}
+                  onChange={handleCheckboxChange(setInternet1Q1)}
                   columns={2}
                 />
                 <CheckboxGroup
                   label="What internet provider are you already using?"
                   options={["AT&T", "Spectrum", "Comcast", "Zayo", "Earthlink", "Crown Castle", "Cox", "Lumen", "Geolinks", "Other:"]}
-                  selectedOptions={internetProviderUsiing}
-                  onChange={handleCheckboxChange(setInternetProviderUsing)}
+                  selectedOptions={internet1Q2}
+                  onChange={handleCheckboxChange(setInternet1Q2)}
                   columns={2}
                 />
                 <CheckboxGroup
                   label="Will you need routers or managed circuits/switches?"
                   options={["Yes", "No", "Unsure"]}
-                  selectedOptions={internetRouters}
-                  onChange={handleCheckboxChange(setInternetRouters)}
+                  selectedOptions={internet1Q3}
+                  onChange={handleCheckboxChange(setInternet1Q3)}
                 />
               </div>
 
@@ -62,15 +66,15 @@ const Internet = () => {
                 <CheckboxGroup
                   label="What type of network solutions do you currently use?"
                   options={["Cellular", "Satellite", "Dark Fiber", "COAX", "Fixed Wireless", "VPN", "Dedicated Fiber", "SDWAN", "Shared Fiber", "MPLS", "Other:"]}
-                  selectedOptions={internetCompaniesConsidered}
-                  onChange={handleCheckboxChange(setInternetCompaniesConsidered)}
+                  selectedOptions={internet1Q4}
+                  onChange={handleCheckboxChange(setInternet1Q4)}
                   columns={2}
                 />
                 <CheckboxGroup
                   label="What internet provider are you already using?"
                   options={["AT&T", "Spectrum", "Comcast", "Zayo", "Earthlink", "Crown Castle", "Cox", "Lumen", "Geolinks", "Other:"]}
-                  selectedOptions={internetProviderUsiing}
-                  onChange={handleCheckboxChange(setInternetProviderUsing)}
+                  selectedOptions={internet1Q5}
+                  onChange={handleCheckboxChange(setInternet1Q5)}
                   columns={2}
                 />
               </div>

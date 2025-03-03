@@ -87,21 +87,21 @@ const Internet2 = () => {
           <CheckboxGroup
             label="What types of applications are you planning to run on the network?"
             options={["CRM", "Voice", "Encrypted Data", "SAP", "Email", "Large Graphics/Videos", "ERP", "File Sharing", "Office Documents"]}
-            selectedOptions={internet2Q3}
-            onChange={handleCheckboxChange(setInternet2Q3)}
+            selectedOptions={internet2Q6}
+            onChange={handleCheckboxChange(setInternet2Q6)}
             columns={2}
           />
           <CheckboxGroup
             label="Is backup connection required?"
             options={["Yes", "No", "Unsure"]}
-            selectedOptions={internet2Q4}
-            onChange={handleCheckboxChange(setInternet2Q4)}
+            selectedOptions={internet2Q7}
+            onChange={handleCheckboxChange(setInternet2Q7)}
           />
           <CheckboxGroup
             label="Are static IPs required? If yes, how many?"
             options={["Yes:", "No", "Unsure"]}
-            selectedOptions={internet2Q4}
-            onChange={handleCheckboxChange(setInternet2Q4)}
+            selectedOptions={internet2Q8}
+            onChange={handleCheckboxChange(setInternet2Q8)}
           />
         </div>
       </div>
