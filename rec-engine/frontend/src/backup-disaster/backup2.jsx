@@ -5,7 +5,7 @@ import './backup.css';
 
 const Backup2 = () => {
   const navigate = useNavigate();
-  const [progress, setProgress] = useState(75);
+  const [progress] = useState(75);
   const [selectedCompliance, setSelectedCompliance] = useState([]);
   const [backupFrequency, setBackupFrequency] = useState([]);
   const [failoverOption, setFailoverOption] = useState([]);
@@ -13,11 +13,10 @@ const Backup2 = () => {
 
   const handleComplianceChange = (event) => {
     const { value, checked } = event.target;
-    const updatedOptions = checked
+    setSelectedCompliance(checked
       ? [...selectedCompliance, value]
-      : selectedCompliance.filter((item) => item !== value);
-
-    setSelectedCompliance(updatedOptions);
+      : selectedCompliance.filter((item) => item !== value)
+    );
   };
 
   const handleNext = () => {
@@ -30,73 +29,59 @@ const Backup2 = () => {
       <ProgressBar progress={progress} />
       <PageHeader title="Backup & Disaster Recovery Continued" />
 
-      <CheckboxGroup
-        label="How often would you like to backup your data?"
-        options={["Daily", "Weekly", "Monthly", "Semiannually", "Annually"]}
-        selectedOptions={backupFrequency}
-        onChange={(e) => setBackupFrequency([e.target.value])}
-      />
+      <div className="form-section">
+        <CheckboxGroup
+          label="How often would you like to backup your data?"
+          options={["Daily", "Weekly", "Monthly", "Semiannually", "Annually"]}
+          selectedOptions={backupFrequency}
+          onChange={(e) => setBackupFrequency([e.target.value])}
+        />
 
-      <CheckboxGroup
-        label="Do you have any compliance or security requirements?"
-        options={["CCPA", "FDCC", "FEDRAMP", "FINRA", "ITAR", "NERC", "FISMA", "GDPR", "HIPPA", "NIST", "None"]}
-        selectedOptions={selectedCompliance}
-        onChange={handleComplianceChange}
-      />
+        <CheckboxGroup
+          label="Do you have any compliance or security requirements?"
+          options={["CCPA", "FDCC", "FEDRAMP", "FINRA", "ITAR", "NERC", "FISMA", "GDPR", "HIPPA", "NIST", "None"]}
+          selectedOptions={selectedCompliance}
+          onChange={handleComplianceChange}
+        />
 
-      <QuestionWithInput
-        label="Other:"
-        name="otherCompliance"
-        value="\"
-        onChange={() => {}}
-      />
+        <div className="input-group">
+          <label>Other:</label>
+          <input type="text" name="otherCompliance" />
+        </div>
+      </div>
 
-      <CheckboxGroup
-        label="At the time of a failure, do you need to be able to failover your entire infrastructure or just part of it?\"
-        options={["All", "Part"]}
-        selectedOptions={failoverOption}
-        onChange={(e) => setFailoverOption([e.target.value])}
-      />
+      <div className="form-section">
+        <CheckboxGroup
+          label="At the time of a failure, do you need to be able to failover your entire infrastructure or just part of it?"
+          options={["All", "Part"]}
+          selectedOptions={failoverOption}
+          onChange={(e) => setFailoverOption([e.target.value])}
+        />
+      </div>
 
-      <QuestionWithInput
-        label="How much data are you backing up? (Terabytes)"
-        name="dataAmount"
-        value=" "
-        onChange={() => {}}
-      />
+      <div className="form-section">
+        <QuestionWithInput label="How much data are you backing up? (Terabytes)" name="dataAmount" />
+        <QuestionWithInput label="How many servers are you backing up?" name="totalServers" />
+        <QuestionWithInput label="How many servers are physical?" name="physicalServers" />
+        <QuestionWithInput label="How many servers are virtual?" name="virtualServers" />
+      </div>
 
-      <QuestionWithInput
-        label="How many servers are you backing up?"
-        name="totalServers"
-        value=" "
-        onChange={() => {}}
-      />
+      <div className="form-section">
+        <CheckboxGroup
+          label="Are there any non-Windows or Linux devices that need to be included in this backup strategy?"
+          options={["Yes", "No"]}
+          selectedOptions={nonWindowsLinux}
+          onChange={(e) => setNonWindowsLinux([e.target.value])}
+        />
+      </div>
 
-      <QuestionWithInput
-        label="How many servers are physical?"
-        name="physicalServers"
-        value=" "
-        onChange={() => {}}
-      />
+      <div className="button-container">
+        <Button label="Next Section" onClick={handleNext} />
+      </div>
 
-      <QuestionWithInput
-        label="How many servers are virtual?"
-        name="virtualServers "
-        value=" "
-        onChange={() => {}}
-      />
-
-      <CheckboxGroup
-        label="Are there any non-Windows or Linux devices that need to be included in this backup strategy?\"
-        options={["Yes", "No"]}
-        selectedOptions={nonWindowsLinux}
-        onChange={(e) => setNonWindowsLinux([e.target.value])}
-      />
-      <Button label="Next Section" onClick={handleNext} />
       <PageFooter />
     </div>
   );
 };
 
 export default Backup2;
-
