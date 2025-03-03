@@ -23,7 +23,12 @@ const Cybersecurity4 = () => {
   };
 
   const handleNext = () => {
-    navigate("/");
+    if (storedOptions.includes("Backup & Disaster Recovery")) {
+      navigate("/backup"); // Go to Cyber1 if selected
+    } 
+    else {
+      navigate("/thanku");
+    }
   };
 
   return (
