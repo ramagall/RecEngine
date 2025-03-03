@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { GreyTop, ProgressBar, Button, CheckboxGroup, Textbox, PageHeader, PageFooter, QuestionWithInput } from "../global/global-components.jsx";
 import { useNavigate } from "react-router-dom";
+import "./phones.css"
 
 const Phones = () => {
   const [progress, setProgress] = useState(25);

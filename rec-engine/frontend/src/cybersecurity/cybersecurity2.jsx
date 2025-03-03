@@ -112,6 +112,7 @@ const Cybersecurity2 = () => {
             setProgress(progress + 25); // Update progress
             }} 
         />
+        <PageFooter></PageFooter>
     </div>
   );
 };

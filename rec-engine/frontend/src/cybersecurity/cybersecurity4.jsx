@@ -37,7 +37,7 @@ const Cybersecurity4 = () => {
     <div className="form-container">
         <GreyTop></GreyTop>
         <ProgressBar progress={progress} />
-        <PageHeader title="Cybersecurity" />
+        <PageHeader title="Cybersecurity Continued" />
 
         <CheckboxGroup
             label="Do you store, or potentially store any confidential data?"
@@ -72,6 +72,7 @@ const Cybersecurity4 = () => {
                     setProgress(progress + 25); // Update progress
                     }} 
         />
+        <PageFooter></PageFooter>
     </div>
   );
 };
